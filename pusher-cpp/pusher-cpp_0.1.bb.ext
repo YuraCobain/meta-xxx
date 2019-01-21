@@ -1,0 +1,22 @@
+DESCRIPTION = "Pusher client and server built on Boost.Asio"
+
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://LICENSE_1_0.txt;md5=e4224ccaecb14d942c71d31bef20d78c"
+
+inherit cmake
+
+DEPENDS += " \
+    boost \
+    openssl \
+    curl \
+    cmake-native \
+    ninja-native \
+"
+
+SRCREV = "${AUTOREV}"
+SRC_URI = "git://github.com/BenPope/pusher-cpp.git;branch=master;protocol=http"
+SRC_URI[md5sum] = "d41d8cd98f00b204e9800998ecf8427e"
+LIC_FILES_CHKSUM = "file://LICENSE_1_0.txt;md5=e4224ccaecb14d942c71d31bef20d78c"
+S = "${WORKDIR}/git"
+BBCLASSEXTEND = "native"
+
